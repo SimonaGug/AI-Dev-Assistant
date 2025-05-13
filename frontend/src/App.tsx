@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Box, Typography, Paper } from "@mui/material";
+import { Box, Typography, Paper } from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
 import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
 import Header from "./components/Header";
@@ -34,33 +34,60 @@ function App() {
   return (
     <>
       <Header />
-      <Container maxWidth="md">
-        <Box sx={{ my: 6 }}>
-          <Box
-            sx={{ display: "flex", justifyContent: "center", gap: 1, mb: 2 }}
+      {/* Full white center column */}
+      <Box
+        component={Paper}
+        elevation={3}
+        sx={{
+          width: "100%",
+          maxWidth: 800,
+          bgcolor: "background.paper",
+          mx: "auto",
+          my: 6,
+          p: 4,
+          borderRadius: 2,
+        }}
+      >
+        <Typography
+          variant="h4"
+          align="center"
+          gutterBottom
+          sx={{ fontSize: "2rem" }}
+        >
+          AI Dev & Cooking Assistant
+        </Typography>
+
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 1,
+            mb: 3,
+          }}
+        >
+          <CodeIcon fontSize="large" color="primary" />
+          <Typography
+            variant="subtitle1"
+            align="center"
+            sx={{ fontSize: "1.2rem", flex: 1 }}
           >
-            <CodeIcon fontSize="large" color="primary" />
-            <Typography variant="h2" align="center" sx={{ fontSize: "1.5rem" }}>
-              Welcome! This assistant can help you with development questions
-              and suggest delicious recipes based on what you're coding.
-            </Typography>
-            <RestaurantMenuIcon fontSize="large" color="secondary" />
-          </Box>
-          <Paper elevation={3} sx={{ p: 4 }}>
-            <QueryForm onSubmit={sendQuery} loading={loading} />
-            {error && (
-              <Typography
-                color="error"
-                align="center"
-                sx={{ mt: 2, fontSize: "1rem" }}
-              >
-                {error}
-              </Typography>
-            )}
-            <ResponseDisplay response={response} />
-          </Paper>
+            Welcome! This assistant can help you with development questions and
+            suggest delicious recipes based on what you're coding.
+          </Typography>
+          <RestaurantMenuIcon fontSize="large" color="secondary" />
         </Box>
-      </Container>
+
+        <QueryForm onSubmit={sendQuery} loading={loading} />
+        {error && (
+          <Typography color="error" align="center" sx={{ mt: 2 }}>
+            {error}
+          </Typography>
+        )}
+        <Box sx={{ mt: 3 }}>
+          <ResponseDisplay response={response} />
+        </Box>
+      </Box>
     </>
   );
 }
