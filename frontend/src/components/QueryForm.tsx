@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, FC } from "react";
+import { Box, TextField, Button, Typography, Link } from "@mui/material";
+
+// Icons (if you need them)
+import SendIcon from "@mui/icons-material/Send";
 
 interface Props {
   onSubmit: (q: string) => void;
   loading: boolean;
 }
 
-export default function QueryForm({ onSubmit, loading }: Props) {
+const QueryForm: FC<Props> = ({ onSubmit, loading }) => {
   const [input, setInput] = useState("");
 
-  const handle = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (input.trim()) {
       onSubmit(input.trim());
@@ -17,17 +21,39 @@ export default function QueryForm({ onSubmit, loading }: Props) {
   };
 
   return (
-    <form onSubmit={handle}>
-      <input
-        type="text"
-        placeholder="Ask me anything..."
+    <Box
+      component="form"
+      onSubmit={handleSubmit}
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        gap: 2,
+        mt: 2,
+        mb: 2,
+      }}
+    >
+      <TextField
+        fullWidth
+        variant="outlined"
+        placeholder="Hello! How can I help you today?"
         value={input}
-        onChange={(e) => setInput(e.target.value)}
+        onChange={(e: { target: { value: React.SetStateAction<string> } }) =>
+          setInput(e.target.value)
+        }
         disabled={loading}
+        size="medium"
       />
-      <button type="submit" disabled={loading}>
+      <Button
+        type="submit"
+        variant="contained"
+        endIcon={<SendIcon />}
+        disabled={loading}
+        sx={{ whiteSpace: "nowrap" }}
+      >
         {loading ? "Loading…" : "Send"}
-      </button>
-    </form>
+      </Button>
+    </Box>
   );
-}
+};
+
+export default QueryForm;
