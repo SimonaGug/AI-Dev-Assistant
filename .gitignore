@@ -1,0 +1,26 @@
+*.js
+!*.config.js
+*.d.ts
+node_modules
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+
+*/**/dist
+dist
+
+infrastructure/.npmrc
+
+dev-scripts
+
+config.custom-local.yml
+
+*.env
+
+.vscode/*
+.cursor/*
+
+# Mac file stuff
+.DS_Store
+
