@@ -51,6 +51,7 @@ export async function handleQuery(query: string): Promise<string> {
     name: "expert-italian-generation",
     model: "openai-chat",
     modelParameters: {}, // optional: e.g. { temperature: 0.7 }
+    prompt: promptClient,
     input: { query },
   });
 

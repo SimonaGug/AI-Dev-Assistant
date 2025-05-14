@@ -54,7 +54,7 @@ function App() {
           gutterBottom
           sx={{ fontSize: "2rem" }}
         >
-          AI Dev & Cooking Assistant
+          Ciao!
         </Typography>
 
         <Box
@@ -72,8 +72,10 @@ function App() {
             align="center"
             sx={{ fontSize: "1.2rem", flex: 1 }}
           >
-            Welcome! This assistant can help you with development questions and
-            suggest delicious recipes based on what you're coding.
+            I'm Mario, here to help you with all your coding questions. As a
+            true Italian, for every answer I'll pair your code with a delicious,
+            authentic recipe. The more you code, the more recipes you unlock.
+            Buon appetito and happy coding! 🍝💻
           </Typography>
           <RestaurantMenuIcon fontSize="large" color="secondary" />
         </Box>

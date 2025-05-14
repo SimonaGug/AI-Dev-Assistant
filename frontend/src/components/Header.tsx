@@ -5,7 +5,7 @@ const Header: React.FC = () => (
   <AppBar position="static" color="primary">
     <Toolbar sx={{ justifyContent: "center" }}>
       <Typography variant="h4" component="div">
-        AI Dev & Cooking Assistant
+        AI Developer Assistant
       </Typography>
     </Toolbar>
   </AppBar>
