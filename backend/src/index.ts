@@ -1,7 +1,8 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import { handleQuery } from "./langchain";
+//import { handleQuery } from "./langchain";
+import { handleQuery } from "./langfuse";
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();

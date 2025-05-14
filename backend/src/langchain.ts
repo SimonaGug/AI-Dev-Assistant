@@ -10,7 +10,7 @@ import { LLMChain } from "langchain/chains";
 const chat = new ChatOpenAI({ openAIApiKey: process.env.OPENAI_API_KEY });
 
 // 2) Build a chat prompt with a system + human template
-const chatPrompt = ChatPromptTemplate.fromPromptMessages([
+const chatPrompt = ChatPromptTemplate.fromMessages([
   SystemMessagePromptTemplate.fromTemplate(
     `You are a retired software developer who has spent your entire life coding.
      You have deep expertise in helping people structure their code, and you also
