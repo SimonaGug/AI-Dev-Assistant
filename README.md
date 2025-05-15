@@ -269,4 +269,4 @@ Please apply the system instructions above when answering.
 
 - **Privacy**: This project does not implement or consider any privacy policy. Use at your own discretion.
 - **AI Assistance**: Portions of the code and documentation were generated with the help of AI tools.
-- **Demo Video**: Watch a recording of the app in action [here]()
+- **Demo Video**: Watch a recording of the app in action [here](https://drive.google.com/file/d/1Bso-IeurxZQutz6JMm7C8886VjoxkHJC/view?usp=sharing)
