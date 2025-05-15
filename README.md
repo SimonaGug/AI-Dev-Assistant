@@ -2,13 +2,6 @@
 
 An AI-powered full-stack assistant that can answer technical questions with approachable explanations and suggests personalized recipes for daily inspiration.
 
-Built with a modern TypeScript stack:
-
-- ✅ React frontend
-- ✅ Express + LangChain
-- ✅ Prisma for type-safe DB access
-- ✅ Fully Dockerized
-
 ## 📚 Table of Contents
 
 - [Purpose](#purpose)
