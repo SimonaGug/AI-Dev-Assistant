@@ -23,14 +23,14 @@ if (!LANGFUSE_SECRET_KEY) throw new Error("Missing LANGFUSE_SECRET_KEY");
 if (!LANGFUSE_BASEURL) throw new Error("Missing LANGFUSE_BASEURL");
 if (!LANGFUSE_PROJECT_ID) throw new Error("Missing LANGFUSE_PROJECT_ID");
 
-// 1) Initialize the Langfuse client
+//Initialize the Langfuse client
 const lf = new Langfuse({
   publicKey: LANGFUSE_PUBLIC_KEY,
   secretKey: LANGFUSE_SECRET_KEY,
   baseUrl: LANGFUSE_BASEURL,
 });
 
-// 2) Instantiate ChatOpenAI once
+//Instantiate ChatOpenAI once
 const chat = new ChatOpenAI({ openAIApiKey: OPENAI_API_KEY });
 
 export async function handleQuery(query: string): Promise<string> {
@@ -45,12 +45,12 @@ export async function handleQuery(query: string): Promise<string> {
   const promptHuman = await lf.getPrompt("human_prompt");
   const humanTemplate = promptHuman.prompt;
 
-  // C) Create a generation span, passing the prompt object
-  //    This links the generation to the exact prompt version
+  //Create a generation span, passing the prompt object
+  //This links the generation to the exact prompt version
   const gen = run.generation({
     name: "expert-italian-generation",
     model: "openai-chat",
-    modelParameters: {}, // optional: e.g. { temperature: 0.7 }
+    modelParameters: {}, //{ temperature: 0.7 }
     prompt: promptClient,
     input: { query },
   });
@@ -62,10 +62,10 @@ export async function handleQuery(query: string): Promise<string> {
   const chain = new LLMChain({ llm: chat, prompt: chatPrompt });
   const result = await chain.call({ query });
 
-  // E) End the generation span (logs the output)
+  //End the generation span (logs the output)
   gen.end({ output: result.text });
 
-  // F) Flush any pending events to Langfuse
+  //Flush any pending events to Langfuse
   await lf.shutdownAsync();
 
   return result.text;

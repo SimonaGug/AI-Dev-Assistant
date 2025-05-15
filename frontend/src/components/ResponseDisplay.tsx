@@ -1,4 +1,3 @@
-// src/components/ResponseDisplay.tsx
 import React, { FC } from "react";
 import { Box, Typography } from "@mui/material";
 import ReactMarkdown from "react-markdown";

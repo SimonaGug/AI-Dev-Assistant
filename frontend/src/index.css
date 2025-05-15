@@ -1,7 +1,6 @@
-/* Basic body reset and Italian flag background */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  /* Italian flag: green, white, red vertical stripes */
+  /* Italian flag */
   background: linear-gradient(90deg, #009246 33.33%, #FFFFFF 33.33% 66.67%, #CE2B37 66.67%);
 }

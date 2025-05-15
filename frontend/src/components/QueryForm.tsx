@@ -1,7 +1,6 @@
 import React, { useState, FC } from "react";
-import { Box, TextField, Button, Typography, Link } from "@mui/material";
+import { Box, TextField, Button } from "@mui/material";
 
-// Icons (if you need them)
 import SendIcon from "@mui/icons-material/Send";
 
 interface Props {
