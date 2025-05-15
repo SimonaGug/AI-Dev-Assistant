@@ -1,28 +1,8 @@
 *.js
 !*.config.js
-*.d.ts
-node_modules
-
-# CDK asset staging directory
-.cdk.staging
-cdk.out
-
-*/**/dist
-dist
-
-infrastructure/.npmrc
-
-dev-scripts
-
-config.custom-local.yml
-
+*node_modules
 *.env
 
-.vscode/*
-.cursor/*
-
-backend/node_modules
-backend/.env
 backend/.env.docker
 backend/prisma/dev.db
 
