@@ -72,10 +72,20 @@ function App() {
             align="center"
             sx={{ fontSize: "1.2rem", flex: 1 }}
           >
-            I'm Mario, here to help you with all your coding questions. As a
-            true Italian, for every answer I'll pair your code with a delicious,
-            authentic recipe. The more you code, the more recipes you unlock.
-            Buon appetito and happy coding! 🍝💻
+            <strong>
+              I'm Mario, your retired coding maestro and lifelong software
+              artisan.
+            </strong>
+            <br />
+            With decades of experience writing clean, elegant code, I'm here to
+            help you structure yours like a true pro. But that's not all, as a
+            proud Italian, I believe great code deserves great food. That's why
+            every time you bring me a coding question, I'll serve up a perfectly
+            paired Italian recipe.
+            <br />
+            The more you code, the more recipes you unlock.
+            <br />
+            <strong>Buon appetito and happy coding! 🍝💻 </strong>
           </Typography>
           <RestaurantMenuIcon fontSize="large" color="secondary" />
         </Box>
