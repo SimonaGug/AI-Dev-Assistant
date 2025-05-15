@@ -8,6 +8,7 @@ import ResponseDisplay from "./components/ResponseDisplay";
 import "./index.css";
 
 function App() {
+  const VITE_API_URL = "http://localhost:4000";
   const [response, setResponse] = useState<string>("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -16,7 +17,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/query`, {
+      const res = await fetch(`${VITE_API_URL}/api/query`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query }),

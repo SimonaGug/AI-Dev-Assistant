@@ -78,7 +78,8 @@ Example queries include:
 3. **Build and start the containers**
 
    ```bash
-   docker-compose up --build
+   docker-compose build
+   docker-compose up -d
    ```
 
 4. **Open the app** in your browser:
@@ -109,15 +110,7 @@ Example queries include:
    yarn install
    ```
 
-2. **Set up the database**
-
-   ```bash
-   cd ../backend
-   yarn prisma generate
-   yarn prisma migrate dev
-   ```
-
-3. **Create your `.env` file** in `backend/`
+2. **Create your `.env` file** in `backend/`
 
    ```env
     OPENAI_API_KEY= your-openai-api-key
@@ -129,14 +122,14 @@ Example queries include:
     LANGFUSE_PROJECT_ID="cmamu9tfb002fad07wnbeybr3"
    ```
 
-4. **Build and start the containers for the database**
+3. **Build and start the containers for the database**
 
    ```bash
    docker-compose build
    docker-compose up -d db
    ```
 
-5. **Run the servers**
+4. **Run the servers**
 
    ```bash
    # In one terminal
@@ -148,18 +141,19 @@ Example queries include:
    yarn dev
    ```
 
-6. **Visit**
+5. **Open the Prisma Studio** in your browser:
 
-   ```
-   http://localhost:3000
-   ```
-
-7. **Open the Prisma Studio** in your browser:
    ```
    # In another terminal
    cd backend
    yarn prisma studio
    http://localhost:5555
+   ```
+
+6. **Visit**
+
+   ```
+   http://localhost:3000
    ```
 
 ---
