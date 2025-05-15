@@ -1,7 +1,12 @@
-FROM node:18-alpine
+FROM node:18
+
 WORKDIR /app
+
 COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile
+RUN yarn install
+
 COPY . .
-RUN yarn build
-CMD ["npx", "serve", "dist"]
+
+CMD ["yarn", "dev"]
+
+EXPOSE 3000

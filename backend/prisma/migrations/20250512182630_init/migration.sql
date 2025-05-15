@@ -1,7 +1,0 @@
--- CreateTable
-CREATE TABLE "Query" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    "query" TEXT NOT NULL,
-    "response" TEXT NOT NULL,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
-);
