@@ -21,6 +21,10 @@ config.custom-local.yml
 .vscode/*
 .cursor/*
 
-# Mac file stuff
-.DS_Store
+backend/node_modules
+backend/.env
+backend/.env.docker
+backend/prisma/dev.db
+
+
 
