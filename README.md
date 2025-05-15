@@ -129,7 +129,14 @@ Example queries include:
     LANGFUSE_PROJECT_ID="cmamu9tfb002fad07wnbeybr3"
    ```
 
-4. **Run the servers**
+4. **Build and start the containers for the database**
+
+   ```bash
+   docker-compose build
+   docker-compose up -d db
+   ```
+
+5. **Run the servers**
 
    ```bash
    # In one terminal
@@ -141,13 +148,13 @@ Example queries include:
    yarn dev
    ```
 
-5. **Visit**
+6. **Visit**
 
    ```
    http://localhost:3000
    ```
 
-6. **Open the Prisma Studio** in your browser:
+7. **Open the Prisma Studio** in your browser:
    ```
    # In another terminal
    cd backend
